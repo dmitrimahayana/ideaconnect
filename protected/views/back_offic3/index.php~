@@ -1,0 +1,252 @@
+<?php 
+	$this->pageTitle='Dashboard';
+?>
+<div class="dasboard">
+	<div class="quick-action">
+		<ul class="clearfix">
+			<li><a href="<?php echo Yii::app()->createUrl('vacancy/admin/adminadd')?>"><strong>Tambah</strong><br/>Lowongan</a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('test/admin/adminadd')?>"><strong>Tambah</strong><br/>Panggilan Test</a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('vacancy/admin/adminrekap')?>"><strong>Rekap</strong><br/>Pelamar</a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('member/admin/adminmanage/gid/5')?>"><strong>Approve</strong><br/>Member</a></li>
+		</ul>
+	</div>
+
+	<div class="boxed clearfix">
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Jobseeker</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Jobseeker Hari Ini</td>
+							<td><?php echo $jobseekerToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Semua Jobseeker</td>
+							<td><?php echo $allJobSeeker?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Jobseeker Aktif</td>
+							<td><?php echo $jobseekerActive?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Jobseeker Tidak Aktif</td>
+							<td><?php echo $jobseekerNotActive?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Jobseeker Alumni</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Jobseeker Alumni Hari Ini</td>
+							<td><?php echo $jobseekerAlumniToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Jobseeker Alumni Aktif</td>
+							<td><?php echo $jobseekerAlumniActive?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Jobseeker Alumni Tidak Aktif</td>
+							<td><?php echo $jobseekerAlumniNotACtive?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+                                                        <td>Jobseeker Alumni Data Komplete</td>
+							<td><?php echo $JobseekerAlumniDataComplete?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="boxed clearfix">
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Employer</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Employer Hari Ini</td>
+							<td><?php echo $employerToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Semua Employer</td>
+							<td><?php echo $allEmployer?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Employer Aktif</td>
+							<td><?php echo $employerActive?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Employer Tidak Aktif</td>
+							<td><?php echo $employerNotActive?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Artikel</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Artikel Hari Ini</td>
+							<td><?php echo $articleToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Semua Artikel</td>
+							<td><?php echo $allArticle?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Artikel Publish</td>
+							<td><?php echo $publishArticle?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Artikel Unpublish</td>
+							<td><?php echo $unpublishArticle?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="boxed clearfix">
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Lowongan</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Lowongan Hari Ini</td>
+							<td><?php echo $vacancyToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Semua Lowongan</td>
+							<td><?php echo $allvacancy?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Lowongan Aktif</td>
+							<td><?php echo $activevacancy?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Lowongan Tidak Aktif</td>
+							<td><?php echo $notActiveVacancy?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="box">
+			<div class="grid-view" id="content-grid">
+				<div class="summary"><strong>Statistik Panggilan Test</strong></div>
+				<table class="items">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Keterangan</th>
+							<th>Jumlah</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Panggilan Test Hari Ini</td>
+							<td><?php echo $testCallToday?></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Semua Panggilan Test</td>
+							<td><?php echo $allTestCall?></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Panggilan Test Publish</td>
+							<td><?php echo $testCallPublish?></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Panggilan Test Unpublish</td>
+							<td><?php echo $testCallUnPublish?></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="dasboard-box1">
+		<!-- statistik Jobseeker -->
+
+		<!-- statistik Jobseeker Alumni -->
+		<!-- statistik Employer -->
+	</div>
+	<div class="dasboard-box2">
+		<!-- statistik Artikel -->
+		<!-- statistik Lowongan -->
+		<!-- statistik Panggilan Test -->
+	</div>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,1230 @@
+/* =Slider
+-------------------------------------------------------------- */
+#slider,
+#slider .carousel ul li,
+#main .article .slider, 
+#main .article .carousel ul li {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#slider .carousel,
+#main .article .carousel {
+	overflow: hidden;
+}
+#slider ul,
+#main .article ul {
+	display: block;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 200000px;
+}
+#slider ul li,
+#main .article ul li {
+	float: left;
+}
+#slider ul li img {
+	display: block;
+	width: 100%;
+}
+
+/* =Detail Dialog
+ -------------------------------------------------------------- 
+ */
+.dialog #sidebar,
+.dialog #content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+	float: left;
+}
+.dialog #content {
+	position: relative;
+	width: 678px;
+}
+.dialog #content:before {
+	position: absolute;
+	top: 0;
+	right: -7px;
+	display: block;
+	content: "";
+	width: 8px;
+	height: 100%;
+	background: url('main/images/dialog_sidebar_shadow.png') 0 0 repeat-y;
+	z-index: 991;
+}
+.dialog #sidebar {
+	width: 270px;
+}
+
+/* =Main
+ -------------------------------------------------------------- 
+ *
+ ** Heading
+ ** Project
+ ** Article
+ ** See All
+ *
+ -------------------------------------------------------------- 
+ */
+
+/* Heading */
+#main .new h2,
+#main .time-ticking h2,
+#main .article h2 {
+	font-size: 24px;
+	line-height: 28px;
+	padding: 4px 0 4px 43px;
+}
+#main .new h2 {
+	background: url('main/images/project_new.png') 0 50% no-repeat;
+}
+#main .time-ticking h2 {
+	background: url('main/images/project_time.png') 0 50% no-repeat;
+}
+#main .article h2 {
+	background: url('main/images/project_behind.png') 0 50% no-repeat;
+}
+
+/* Project */
+#main .list-view {
+	margin: 0 0 10px 0;
+}
+#main .list-view .sep,
+.body #project #content .list-view .sep,
+.body #news #content .sep img {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	position: relative;
+	float: left;
+	border: 3px solid #d9d9d9;
+	background: #fff;
+}
+
+#main .list-view .sep {
+	width: 467px;
+	margin: 0 16px 16px 0;
+	padding: 0 0 0 0;
+}
+#main .list-view .sep:hover,
+.body #project #content .list-view .sep:hover {
+	border: 3px solid #b0b0b0;
+}
+#main .list-view .sep:nth-child(2n) {
+	margin: 0 0 16px 0;
+}
+
+#main .list-view .sep .photo,
+.body #project #content .list-view .sep .photo {
+	float: left;
+	width: 120px;
+}
+#main .list-view .sep .photo a,
+#main .list-view .sep .photo img,
+.body #project #content .list-view .sep .photo a,
+.body #project #content .list-view .sep .photo img {
+	display: block;
+	width: 100%;
+}
+#main .list-view .sep .photo a,
+.body #project #content .list-view .sep .photo a {
+	position: relative;
+}
+
+#main .list-view .sep .photo a span,
+#main .list-view .sep .content,
+#main .list-view .sep .content .progress,
+#main .list-view .sep .content .progress div,
+#main .list-view .sep .content .info,
+.body #project #content .list-view .sep .photo a span,
+.body #project #content .list-view .sep .content,
+.body #project #content .list-view .sep .content .progress,
+.body #project #content .list-view .sep .content .progress div,
+.body #project #content .list-view .sep .content .info {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#main .list-view .sep .content,
+.body #project #content .list-view .sep .content {
+	float: left;
+	width: 341px;
+}
+#main .list-view .sep .photo a span,
+#main .list-view .sep .content .progress,
+#main .list-view .sep .content .progress div,
+.body #project #content .list-view .sep .photo a span,
+.body #project #content .list-view .sep .content .progress,
+.body #project #content .list-view .sep .content .progress div {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 23px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#main .list-view .sep .photo a span,
+#main .list-view .sep .content .progress,
+.body #project #content .list-view .sep .photo a span,
+.body #project #content .list-view .sep .content .progress {
+	width: 100%;
+}
+#main .list-view .sep .photo a span,
+.body #project #content .list-view .sep .photo a span {
+	background: #c3c3c3;
+	padding: 3px 10px 4px 10px;
+	text-align: center;
+}
+#main .list-view .sep .content,
+.body #project #content .list-view .sep .content {
+	position: relative;
+}
+#main .list-view .sep .content {
+	min-height: 160px;
+	padding: 33px 10px 10px 12px;
+}
+#main .list-view .sep .content .progress,
+.body #project #content .list-view .sep .content .progress {
+	background: #f1f1f1;
+}
+#main .list-view .sep .content .progress div,
+.body #project #content .list-view .sep .content .progress div {
+	background: #008fd5;
+	padding: 3px 10px 4px 10px;
+	color: #fff;
+}
+#main .list-view .sep .content .info {
+	float: right;
+	width: 110px;
+	min-height: 117px;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
+	border-left: 1px solid #cacaca;
+}
+#main .list-view .sep .content a,
+.body #project #content .list-view .sep .content a {
+	display: inline-block;
+	padding: 0 0 4px 0;
+}
+#main .list-view .sep .content a.title,
+.body #project #content .list-view .sep .content a.title {
+	display: block;
+	font-size: 18px;
+	line-height: 20px;
+}
+#main .list-view .sep .content .info,
+#main .list-view .sep .content .info *,
+.body #project #content .list-view .sep .content .info,
+.body #project #content .list-view .sep .content .info * {
+	font-size: 14px;
+	line-height: 18px;
+}
+#main .list-view .sep .content .info div:first-child,
+.body #project #content .list-view .sep .content .info span {
+	background: url('main/images/people.png') 0 50% no-repeat;
+	padding: 1px 0 1px 25px;
+}
+#main .list-view .sep .content .info div:nth-child(2),
+#main .list-view .sep .content .info div:nth-child(2) strong,
+.body #project #content .list-view .sep .content .info div.percent span,
+.body #project #content .list-view .sep .content .info div.percent span strong {
+	font-size:36px;
+	line-height: 40px;
+}
+#main .list-view .sep .content .info div:nth-child(2),
+#main .list-view .sep .content .info div:nth-child(2) strong {
+	color: #424242;
+}
+
+/* Article */
+#main .article {}
+#main .article .slider {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 3px solid #d9d9d9;
+	padding: 6px 6px 6px 6px;
+	margin: 0 0 15px 0;
+	background: #fff;
+}
+#main .article .slider:hover {
+	border: 3px solid #b0b0b0;
+}
+#main .article .carousel,
+#main .article .carousel ul li {
+	width: 932px;
+}
+#main .article ul li iframe,
+#main .article ul li img {
+	display: block;
+	width: 100%;
+	height: 250px;
+}
+#main .article ul li div {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+	width: 50%;
+	padding: 0 20px 0 0;
+}
+#main .article ul li div:last-child {
+	padding: 20px 30px 0 20px;
+	font-size: 14px;
+	line-height: 19px;
+}
+#main .article ul li div:last-child a {
+	display: block;
+	margin: 0 0 10px 0;
+	font-size: 24px;
+	line-height: 28px;	
+}
+#main .article ul li div div {
+	float: none;
+	width: auto;
+	padding: 0 0 0 0;
+}
+#main .article ul li div.users {
+	position: relative;
+	padding: 20px 0 40px 100px;
+	min-height: 90px;
+	font-size: 18px;
+	line-height: 20px;
+}
+#main .article ul li div.users a {
+	margin: 0 0 0 0;
+}
+#main .article ul li div.users img {
+	-webkit-border-radius: 45px;
+	-moz-border-radius: 45px;
+	border-radius: 45px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 90px;
+	height: 90px;
+}
+#main .article .button {
+    text-align: center;
+}
+#main .article .button a {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+    display: inline-block;
+	background: #E3E3E3;
+	margin: 0 10px 0 0;
+	overflow: hidden;
+    height: 15px;
+    width: 15px;
+	color: transparent;	
+}
+#main .article .button a:last-child {
+	margin: 0 0 0 0;	
+}
+#main .article .button a:first-child,
+#main .article .button a.active,
+#main .article .button a:hover {
+	background: #FE2725;
+}
+
+/* See All */
+#main .seemore,
+.body #project #content .seemore {
+	border-top: 1px solid #c3c3c3;
+	position: relative;
+}
+#main .seemore a,
+.body #project #content .seemore a {
+	position: absolute;
+	display: inline-block;
+	background: #f5f5f5;
+	right: 0;
+	top: -10px;
+	padding: 0 0 0 12px;
+}
+
+/* =Project
+ -------------------------------------------------------------- 
+ *
+ * Main
+ ** Heading
+ ** Sidebar
+ ** Filter
+ ** Content
+ *
+ * Detail
+ ** Sidebar
+ ** Content
+ *
+ -------------------------------------------------------------- 
+ */
+
+/* =Project Main
+-------------------------------------------------------------- */
+/* Heading */
+.body #project #content h1,
+.body #news #content h1{
+	padding: 0 0 0 0;
+	margin: 0 0 20px 0;
+	font-family: 'Enriqueta', Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	color: #bfbfbf;
+}
+.body #project #content .new h2,
+.body #project #content .popular h2,
+.body #project #content .staf-choice h2,
+.body #project #content .most-founded h2,
+.body #project #content .time-ticking h2 {
+	padding: 3px 0 3px 30px;
+}
+.body #project #content .new h2 {
+	background: url('project/images/project_new.png') 0 50% no-repeat;
+}
+.body #project #content .popular h2 {
+	background: url('project/images/project_time.png') 0 50% no-repeat;
+}
+.body #project #content .staf-choice h2 {
+	background: url('project/images/project_time.png') 0 50% no-repeat;
+}
+.body #project #content .most-founded h2 {
+	background: url('project/images/project_time.png') 0 50% no-repeat;
+}
+.body #project #content .time-ticking h2 {
+	background: url('project/images/project_time.png') 0 50% no-repeat;
+}
+
+/* Sidebar */
+.body #project #sidebar {}
+.body #project #sidebar .category {
+	padding: 40px 20px 20px 30px
+}
+.body #project #sidebar .category a {
+	display: block;
+	padding: 1px 8px 1px 10px;
+	font-style: italic;
+	color: #424242;
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: none;
+	font-weight: 700;
+}
+.body #project #sidebar .category a:hover {
+	border-right: 3px solid #5fcff0;
+}
+.body #project #sidebar .category a.all,
+.body #project #sidebar .category ul li a {
+	color: #858585;
+	font-size: 18px;
+	line-height: 22px;
+	font-style: normal;
+	font-weight: 400;
+}
+.body #project #sidebar .category a:active,
+.body #project #sidebar .category a.active {
+	background: #5fcff0;
+	color: #424242;
+}
+.body #project #sidebar .category a.all {
+	margin: 0 0 20px 0;
+}
+.body #project #sidebar .category ul {
+	display: block;
+	list-style: none;
+	padding: 0 0 0 0;
+	margin: 3px 0 20px 0;
+}
+.body #project #sidebar .category ul li {
+	padding: 1px 0 1px 0;
+}
+
+/* Filter */
+.body #project #content .filter,
+.dialog #project #content .menu {
+	padding: 3px 3px 0 3px;
+	background: #424242;
+}
+.body #project #content .filter {
+	margin: 0 0 20px 0;
+}
+.body #project #content .filter ul,
+.body #project #content .filter ul li,
+.dialog #project #content .menu ul,
+.dialog #project #content .menu ul li,
+.body #project #content .list-view .sep .content .info div {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.body #project #content .filter ul,
+.dialog #project #content .menu ul {
+	display: block;
+	width: 100%;
+	list-style: none;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+.body #project #content .filter ul li,
+.dialog #project #content .menu ul li {
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 0 3px 0 0;
+}
+.body #project #content .filter ul li:last-child,
+.dialog #project #content .menu ul li:last-child {
+	padding: 0 0 0 0;
+}
+.body #project #content .filter ul li a,
+.dialog #project #content .menu ul li a {
+	display: block;
+	padding: 7px 10px 4px 10px;	
+	border-bottom: 3px solid transparent;
+	color: #fff;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 700;
+	text-decoration: none;
+}
+.body #project #content .filter ul li:hover a,
+.dialog #project #content .menu ul li:hover a {
+	border-bottom: 3px solid #5fcff0;
+}
+.body #project #content .filter ul li.active a,
+.dialog #project #content .menu ul li.active a {
+	background: #5fcff0;
+	border-bottom: 3px solid #5fcff0;
+	color: #424242;
+}
+
+/* Content */
+.body #project #content {
+	padding: 20px 0 25px 25px;
+}
+.body #project #content .list-view {
+	margin: 0 0 5px 0;
+}
+.body #project #content .list-view .sep {
+	width: 345px;
+	margin: 0 15px 15px 0;
+	padding: 0 0 0 0;
+}
+.body #project #content .list-view .sep:nth-child(2n) {
+	margin: 0 0 15px 0;
+}
+.body #project #content .list-view .sep .photo div {
+	overflow: hidden;
+	height: 17px;
+	background: #dedede;
+	border-top: 6px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 10px solid transparent;
+}
+.body #project #content .list-view .sep .photo div a {
+	display: inline;
+	width: auto;
+}
+.body #project #content .list-view .sep .content {
+	width: 219px;
+	min-height: 160px;
+	padding: 30px 10px 10px 12px;
+}
+.body #project #content .list-view .sep .content .info,
+.body #project #content .list-view .sep .content .info * {
+	color: #909090;
+}
+.body #project #content .list-view .sep .content .info {
+	border-bottom: 1px solid #cacaca;
+	padding: 0 0 6px 0;
+	margin: 0 0 6px 0;
+}
+.body #project #content .list-view .sep .content .info span {
+	display: inline-block;
+	margin: 0 0 3px 0;
+}
+.body #project #content .list-view .sep .content .info div {
+	float: left;
+	width: 115px;
+}
+.body #project #content .list-view .sep .content .info div.percent span {
+	display: block;
+	background: none;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+/* =Project Detail
+-------------------------------------------------------------- */
+/* Menu */
+.dialog #project #content .menu ul li {
+	width: 25%;
+}
+.dialog #project #content .menu ul li a {
+	padding: 10px 10px 7px 10px;	
+}
+.dialog #project #content .menu ul li a  span {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	position: relative;
+	top: -5px;
+	display: inline-block;
+	background: #303030;
+	min-width: 15px;
+	margin: 0 0 0 8px;
+	padding: 0 2px 0 2px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 16px;
+	color: #fff;
+}
+
+/* Proposal */
+.dialog #project #content .boxed {
+	padding: 15px 15px 15px 15px;
+}
+.dialog #project .proposal {
+	
+}
+.dialog #project .proposal div.intro,
+.dialog #project .proposal div.sep {
+	padding: 0 0 20px 0;
+}
+.dialog #project .proposal .intro iframe {
+	display: block;
+	width: 100%;
+	height: 420px;
+}
+.dialog #project .proposal .intro h5 {
+	margin: 15px 0 0 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+.dialog #project .proposal .sep h2 {
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	line-height: 26px;
+}
+.dialog #project .proposal div.sep img {
+	display: block;
+	width: 100%;
+	margin: 15px 0 15px 0;
+}
+
+/* Comment */
+.dialog #project .comment {
+	padding: 0 0 0 0;
+}
+.dialog #project .comment .intro {
+	padding: 0 10px 0 10px;
+	margin: 0 0 15px 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+.dialog #project .comment .list-view {
+	margin: 0 0 0 0;
+}
+.dialog #project .comment .list-view .sep .list-view {
+	margin: 15px 0 0 0;
+}
+
+/* Sidebar */
+.dialog #project #sidebar {
+	padding: 0 12px 12px 12px;
+}
+
+/* Profile */
+.dialog #project #sidebar .profile,
+.dialog #project #sidebar .profile .rate span,
+.dialog #project #sidebar .profile .info div:last-child {
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.dialog #project #sidebar .profile,
+.dialog #project #sidebar .progress,
+.dialog #project #sidebar .follow {
+	margin: 0 0 15px 0;
+}
+.dialog #project #sidebar .profile {
+	background: #ff2626;
+}
+.dialog #project #sidebar .profile .rate,
+.dialog #project #sidebar .profile .rate span {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	height: 40px;
+}
+.dialog #project #sidebar .profile .rate {
+	padding: 0 15px;
+	border-bottom: 1px solid #c40202;
+	text-align: right;
+}
+.dialog #project #sidebar .profile .rate span {
+	display: inline-block;
+	top: -7px;
+	width: 35px;
+	background: #d7d7d7;
+}
+.dialog #project #sidebar .profile .rate span:first-child {
+	margin: 0 10px 0 0;
+}
+.dialog #project #sidebar .profile .rate span:before {
+	position: absolute;
+	top: 0;
+	left: -7px;
+	display: block;
+	content: "";
+	width: 7px;
+	height: 6px;
+	background: url('project/images/badge_shadow.png') 0 0 repeat-x;
+}
+.dialog #project #sidebar .profile .info,
+.dialog #project #sidebar .profile .info * {
+	color: #fff;
+}
+.dialog #project #sidebar .profile .info {
+	padding: 12px 3px 3px 3px;
+}
+.dialog #project #sidebar .profile .info a {
+	display: inline-block;
+}
+.dialog #project #sidebar .profile .info a.bio,
+.dialog #project #sidebar .progress .contribute a {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	text-align: center;
+}
+.dialog #project #sidebar .profile .info a.bio {
+	padding: 6px 10px;
+	margin: 10px 5px 0 5px;
+	background: #c8c8c8;
+	color: #2b2b2b;
+	line-height: 14px;
+}
+.dialog #project #sidebar .profile .info div {
+	padding: 0 7px 10px 7px;
+}
+.dialog #project #sidebar .profile .info div:first-child,
+.dialog #project #sidebar .profile .info div:first-child a {
+	font-size: 18px;
+	line-height: 20px;
+}
+.dialog #project #sidebar .profile .info div:first-child span {
+	font-size: 13px;
+	line-height: 16px;
+}
+.dialog #project #sidebar .profile .info div:first-child img {
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+	float: left;
+	margin: 0 12px 0 0;
+}
+.dialog #project #sidebar .profile .info div:last-child {
+	padding: 10px 10px 10px 10px;
+	background: #2b2b2b;
+}
+
+/* Progress */
+.dialog #project #sidebar .progress,
+.dialog #project #sidebar .follow,
+.dialog #project #sidebar .reward {
+	border: 1px solid #c8c8c8;
+}
+.dialog #project #sidebar .progress .percent,
+.dialog #project #sidebar .progress .percent div {
+	height: 6px;
+	background: #424242;
+}
+.dialog #project #sidebar .progress .percent div {
+	background: #008fd5;
+}
+.dialog #project #sidebar .progress .info {
+	padding: 17px 17px 17px 17px;
+}
+.dialog #project #sidebar .progress .info div {
+	margin: 0 0 15px 0;
+}
+.dialog #project #sidebar .progress .info div:nth-child(2) {
+	border-bottom: 1px solid #c8c8c8;
+	padding: 0 0 15px 0;
+}
+.dialog #project #sidebar .progress .info div.clear,
+.dialog #project #sidebar .progress .info div.sponsor,
+.dialog #project #sidebar .progress .info div.date {
+	margin: 0 0 0 0;
+}
+.dialog #project #sidebar .progress .info div.sponsor {
+	float: left;
+	padding: 0 0 0 12px;
+}
+.dialog #project #sidebar .progress .info div.date {
+	float: right;
+	padding: 0 12px 0 0;
+}
+.dialog #project #sidebar .progress .info div span {
+	display: inline-block;
+	margin: 0 0 5px 0;
+	font-weight: 700;
+}
+.dialog #project #sidebar .progress .info div:first-child span {
+	font-size: 18px;
+	line-height: 18px;
+}
+.dialog #project #sidebar .progress .info div:nth-child(2) strong {
+	display: block;
+	margin: 0 0 15px 0;
+	font-size: 48px;
+	line-height: 40px;
+}
+.dialog #project #sidebar .progress .info div:nth-child(2) span {
+	font-size: 24px;
+	line-height: 20px;
+}
+.dialog #project #sidebar .progress .info div.sponsor span,
+.dialog #project #sidebar .progress .info div.date span {
+	margin: 0 0 2px 0;
+	font-size: 36px;
+	line-height: 30px;
+}
+.dialog #project #sidebar .progress .contribute {
+	border-top: 3px solid #c8c8c8;
+	padding: 15px 10px 10px 10px;
+	font-size: 13px;
+	line-height: 17px;
+}
+.dialog #project #sidebar .progress .contribute a {
+	background: #008fd5;
+	padding: 7px 10px;
+	margin: 0 0 15px 0;
+	font-family: 'Enriqueta', Tahoma, Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/* Follow */
+.dialog #project #sidebar .follow h5,
+.dialog #project #sidebar .reward h5 {
+	margin: 0 0 0 0;
+	background: #424242;
+	padding: 5px 10px 5px 10px;
+	color: #fff;
+	font-weight: 400;
+} 
+.dialog #project #sidebar .follow ul {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+	list-style: none;	
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 10px 10px 10px 10px;
+}
+.dialog #project #sidebar .follow ul li {
+	padding: 0 0 0 25px;
+	border-bottom: 1px solid #dedede;
+}
+.dialog #project #sidebar .follow ul li.facebook {
+	background: url('project/images/facebook.png') 11px 50% no-repeat;
+}
+.dialog #project #sidebar .follow ul li.twitter {
+	background: url('project/images/twitter.png') 8px 50% no-repeat;
+}
+.dialog #project #sidebar .follow ul li.linked-in {
+	background: url('project/images/email.png') 8px 50% no-repeat;
+}
+.dialog #project #sidebar .follow ul li.website {
+	background: url('project/images/website.png') 8px 50% no-repeat;
+}
+.dialog #project #sidebar .follow ul li.email {
+	background: url('project/images/email.png') 8px 50% no-repeat;
+}
+.dialog #project #sidebar .follow ul li:last-child {
+	border-bottom: none;
+}
+.dialog #project #sidebar .follow ul li a {
+	display: block;
+	padding: 8px 5px 8px 10px;
+	color: #424242;
+}
+.dialog #project #sidebar .follow ul li:first-child  a {
+	padding: 8px 5px 8px 10px;
+}
+.dialog #project #sidebar .follow ul li:last-child  a {	
+	padding: 8px 5px 8px 10px;
+}
+.dialog #project #sidebar .follow .button {
+	background: #f0f0f0;
+	padding: 15px 15px;
+	text-align: center;
+}
+.dialog #project #sidebar .follow .button a {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	background: #c8c8c8;
+	padding: 6px 15px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #424242;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+/* Reward */
+.dialog #project #sidebar .reward .list-view .sep {
+	border-bottom: 1px solid #d0d0d0;
+	padding: 10px 12px 12px 12px;
+	background: #f7f7f7;
+}
+.dialog #project #sidebar .reward .list-view .sep:nth-child(3n) {
+	background: #e0e0e0;	
+}
+.dialog #project #sidebar .reward .sep div {
+	padding: 0 0 15px 0;
+}
+.dialog #project #sidebar .reward .sep strong {
+	display: block;
+	margin: 0 0 10px 0;
+	font-size: 18px;
+	line-height: 24px;
+	color: #008fd5;
+}
+
+
+/* =News
+ -------------------------------------------------------------- 
+ *
+ * Main
+ ** Sidebar
+ ** Content
+ *
+ * Detail
+ ** Content
+ ** Sidebar
+ *
+ -------------------------------------------------------------- 
+ */
+
+/* =News Main
+-------------------------------------------------------------- */
+/* Sidebar */
+.body #news #sidebar .menu {
+	padding: 140px 20px 30px 30px;
+}
+.body #news #sidebar .menu a {
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+	color: #858585;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+.body #news #sidebar .menu a.all {
+	margin: 0 0 12px 0;
+}
+.body #news #sidebar .menu a:hover {
+	border-right: 3px solid #5fcff0;
+}
+.body #news #sidebar .menu a.active,
+.body #news #sidebar .menu a:active {
+	color: #424242;
+	background: #5fcff0;
+}
+.body #news #sidebar .menu ul {
+	display: block;
+	list-style: none;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;	
+}
+.body #news #sidebar .menu ul li {
+	margin: 1px 0 1px 0;
+}
+
+/* Project */
+.body #news #sidebar .list-view{
+	margin: 0 0 25px 0;
+}
+.body #news #sidebar .list-view h3,
+.dialog #news #sidebar .list-view h3 {
+	padding: 5px 10px;
+	margin: 0 0 0 0;
+	font-size: 18px;
+	line-height: 22px;
+	color: #fff;
+	background: #fd0101;
+	text-transform: capitalize;
+}
+.body #news #sidebar .list-view .items {
+	padding: 15px 5px 0 5px;
+}
+.body #news #sidebar .list-view .sep,
+.body #news #sidebar .list-view .sep *,
+.dialog #news #sidebar .list-view .sep_project{
+	font-size: 12px;
+	line-height: 16px;
+}
+.body #news #sidebar .list-view .sep,
+.dialog #news #sidebar .list-view .sep_project{
+	border: 1px solid #ababab;
+	background: #FFF;
+	margin: 0 0 10px 0;
+}
+.body #news #sidebar .list-view .sep:last-child,
+.dialog #news #sidebar .list-view .sep_project:last-child{
+	margin: 0 0 0 0;
+}
+.body #news #sidebar .list-view .sep div,
+.dialog #news #sidebar .list-view .sep_project div{
+	padding: 10px 6px;
+}
+.body #news #sidebar .list-view .sep .category,
+.dialog #news #sidebar .list-view .sep_project .category{
+	background: #484747;
+	padding: 2px 10px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #FFF;
+	text-transform: uppercase;
+}
+.body #news #sidebar .list-view .sep a,
+.dialog #news #sidebar .list-view .sep_project a{
+	display: inline-block;	
+	margin: 0 0 3px 0;
+}
+.body #news #sidebar .list-view .sep a.title,
+.dialog #news #sidebar .list-view .sep_project a.title{
+	display: block;
+	font-size: 18px;
+	line-height: 22px;
+}
+.body #news #sidebar .list-view .sep .progress,
+.body #news #sidebar .list-view .sep .progress *,
+.body #news #sidebar .list-view .sep .info div,
+.dialog #news #sidebar .list-view .sep_project .progress,
+.dialog #news #sidebar .list-view .sep_project .progress *,
+.dialog #news #sidebar .list-view .sep_project .info div{
+	padding: 0 0 0 0;
+}
+.body #news #sidebar .list-view .sep .progress,
+.dialog #news #sidebar .list-view .sep_project .progress{
+	background: #e7e7e7;
+}
+.body #news #sidebar .list-view .sep .progress div,
+.dialog #news #sidebar .list-view .sep_project .progress div{
+	background: #008fd5;
+	height: 10px;
+}
+.body #news #sidebar .list-view .sep .info,
+.dialog #news #sidebar .list-view .sep_project .info{
+	position: relative;
+	padding: 6px 10px 6px 10px;
+}
+.body #news #sidebar .list-view .sep .info div:first-child,
+.body #news #sidebar .list-view .sep .info div:first-child *,
+.dialog #news #sidebar .list-view .sep_project .info div:first-child,
+.dialog #news #sidebar .list-view .sep_project .info div:first-child *{
+	font-size: 36px;
+	line-height: 40px;
+	color: #909090;
+}
+.body #news #sidebar .list-view .sep .info div:first-child,
+.dialog #news #sidebar .list-view .sep_project .info div:first-child {
+	float: right;
+}
+.body #news #sidebar .list-view .sep .info div:last-child,
+.dialog #news #sidebar .list-view .sep_project .info div:last-child {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	background: url('project/images/people.png') 0 50% no-repeat;
+	padding: 0 0 0 25px;	
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* Content */
+.body #news #content .sep {
+	border-bottom: 1px solid #BEBEBE;
+	padding: 0 0 45px 0;
+	margin: 0 0 35px 0;
+	font-size: 18px;
+	line-height: 23px;
+}
+.body #news #content .sep div,
+.body #news #content .sep div span {
+	font-size: 14px;
+	line-height: 19px;
+	color: #666;	
+}
+.body #news #content .sep div {
+	margin: 0 0 10px 0;
+}
+.body #news #content .sep div span {
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+.body #news #content .sep img {
+	display: block;
+	margin: 0 0 15px 0;
+	float: none;
+}
+.body #news #content .sep a {
+	display: block;
+	margin: 0 0 12px 0;
+	font-size: 24px;
+	line-height: 29px;
+}
+.body #news #content .sep q {
+	display: block;
+	padding: 10px 20px;
+	background: #484747;
+	color: #fff;
+	font-size: 36px;
+	line-height: 43px;
+}
+
+/* =News Detail
+-------------------------------------------------------------- */
+/* Content */
+.dialog #news #content,
+.dialog #news #content * {
+	font-size: 18px;
+	line-height: 30px;
+}
+.dialog #news #content .box {
+	padding: 20px 15px 20px 15px;
+}
+.dialog #news #content h1 {	
+	padding: 0 0 0 0;
+	margin: 0 0 10px 0;
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: 400;
+	color: #424242;	
+}
+.dialog #news #content img {
+	display: block;
+}
+.dialog #news #content img.full {
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+.dialog #news #content .date,
+.dialog #news #content .date * {
+	font-size: 14px;
+	line-height: 18px;
+}
+.dialog #news #content .date {
+	padding: 0 0 15px 0;
+}
+.dialog #news #content .date span {
+	display: inline-block;
+	margin: 0 0 0 17px;
+}
+.dialog #news #content strong {
+	display: block;
+	margin: 0 0 20px 0;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+/* Comment */
+.dialog #news #content .comment {
+	border-top: 10px solid #424242;	
+}
+
+/* Sidebar */
+.dialog #news #sidebar {
+	border-top: #424242 solid 17px;
+}
+.dialog #news #sidebar .list-view {
+	margin: 0 0 0 0;
+	padding: 30px 0 0 0;
+}
+.dialog #news #sidebar .list-view .sep {
+	border: none;
+	margin: 0 0 0 0;
+	padding: 0 20px 0 13px;
+	font-size: 18px;
+	line-height: 24px;
+}
+.dialog #news #sidebar .list-view .sep .hr {
+	border-bottom:#bababa solid 1px;
+	display: block;
+	margin: 0 0 25px 0;
+	padding: 0 0 50px 0;
+	
+}
+.dialog #news #sidebar .list-view .sep a {
+	font-size: 23px;
+	line-height: 29px;
+	font-weight: 500;
+	color: #008fd5;
+}
+.dialog #news #sidebar .list-view .sep div {
+	padding :  10px 0 18px 0;
+	font-size: 12px;
+}
+.dialog #news #sidebar .list-view .items {
+	padding: 15px 25px 0 25px;
+}
+
+
+/* =Responsive
+--------------------------------------------------------------*/
+/* Resolution 1280 */
+@media only screen and (max-width:1280px) {
+
+}
+
+/* Resolution 1024 */
+@media only screen and (max-width:1024px) {
+
+}
+
+/* Resolution 768 */
+@media only screen and (max-width:768px) {
+
+}
+
+/* Resolution 600 */
+@media only screen and (max-width:600px) {
+
+}
+
+/* Resolution 480 */
+@media only screen and (max-width:480px) {
+
+}
+
+/* Resolution 320 */
+@media only screen and (max-width:320px) {
+
+}

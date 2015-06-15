@@ -1,0 +1,9 @@
+# Sweeto classic theme
+#
+# @author    : swevel
+# @copyright : (c) 2012 Swevel Media
+
+name          : sweeto_classic
+group_page    : admin_sweeto
+default_theme : 0
+thumbnail     : sweeto_classic.png

@@ -1,0 +1,2 @@
+Copyright &copy; 2012 <a href="http://swevel.com" title="Sweeto Platform">Sweeto Platform</a>
+<?php /* <span>|</span><a href="" title="Menu 1">Menu 1</a><span>|</span><a href="" title="Menu 1">Menu 1</a><span>|</span><a href="" title="Menu 1">Menu 1</a> */?>

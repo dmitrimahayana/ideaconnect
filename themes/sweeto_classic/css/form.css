@@ -1,0 +1,295 @@
+/* form.css *
+* Copyright (c) 2011, ECC UGM. All rights reserved.
+* version: 0.1.0
+*
+*/ 
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------*/
+input.span-1, textarea.span-1 {width: 6%;}
+input.span-2, textarea.span-2 {width: 10%;}
+input.span-3, textarea.span-3 {width: 20%;}
+input.span-4, textarea.span-4, select.small {width: 30%;}
+input.span-5, textarea.span-5 {width: 40%;}
+input.span-6, textarea.span-6 {width: 50%;}
+input.span-7, textarea.span-7, select.large {width: 60%;}
+input.span-8, textarea.span-8 {width: 70%;}
+input.span-9, textarea.span-9 {width: 80%;}
+input.span-10, textarea.span-10 {width: 90%;}
+input.span-11, textarea.span-11, select.large  {width: 100%;}
+
+/*simple class*/
+input.full, select.full, textarea.full {width:100%;}
+textarea.smaller {height: 60px;}
+textarea.small {height: 100px;}
+textarea.medium {height: 150px;}
+textarea.large {height: 200px;}
+
+/* =Input
+-------------------------------------------------------------*/
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+select {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+	padding: 6px 8px 6px 8px;
+	font-size: 12px;
+	background: #f8f8f8;
+	color: #666;
+	-webkit-box-shadow: inset 0 1px 0 0px #fff;
+	-moz-box-shadow: inset 0 1px 0 0px #fff;
+	box-shadow: inset 0 1px 0 0px #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px; line-height: 17px;
+	resize: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus { 
+	border-top: solid 1px #f0d648;
+	border-right: solid 1px #f0d648;
+	border-bottom: solid 1px #f0d648;
+	border-left: solid 1px #f0d648;
+	-webkit-box-shadow: 0px 0px 3px 0px #f0d648;
+	-moz-box-shadow: 0px 0px 3px 0px #f0d648;
+	box-shadow: 0px 0px 3px 0px #f0d648;
+}
+input[type="text"].error,
+input[type="password"].error,
+input[type="file"].error,
+textarea.error {
+	border-top: solid 1px #dc5c5c;
+	border-right: solid 1px #dc5c5c;
+	border-bottom: solid 1px #dc5c5c;
+	border-left: solid 1px #dc5c5c;
+	-webkit-box-shadow: 0px 0px 3px 0px #dc5c5c;
+	-moz-box-shadow: 0px 0px 3px 0px #dc5c5c;
+	box-shadow: 0px 0px 3px 0px #dc5c5c;
+}
+select {padding: 5px 5px 5px 8px;}
+
+
+/* Dialog */
+.dialog input[type="text"],
+.dialog input[type="password"],
+.dialog input[type="file"],
+.dialog textarea,
+.dialog select {
+	padding: 4px 6px 4px 6px;
+}
+.dialog select {
+	padding: 3px 3px 3px 6px;	
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+fieldset {
+	border: 1px solid #d5d6d6;
+	background: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 1px 2px 0px #acaeaf;
+	-moz-box-shadow: 0px 1px 2px 0px #acaeaf;
+	box-shadow: 0px 1px 2px 0px #acaeaf;
+}
+fieldset h3 {
+	border-top: 1px solid #f6f6f6;
+	border-bottom: 1px solid #e0e0e0;
+	background: #d7d7d7 url(../images/resource/gridview_summary_bg.png) 100% 100% repeat-x;
+	padding: 10px 15px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	color: #6c6c6c;
+	text-shadow: 0 1px 0 #fff;
+	font-size: 14px;
+	font-family: 'CorbelRegular', Tahoma, Arial, Helvetica, sans-serif;
+}
+fieldset h3 i {
+	display: inline-block;
+	padding: 3px 0 0 0;
+	font-size: 12px;
+	line-height: 17px;
+	font-weight: normal;
+	font-style: normal;
+}
+fieldset div {padding: 10px 20px; border-bottom: 1px dotted #e6e6e6;}
+/*fieldset div:hover {background: #f9f9f9;}*/
+fieldset div:last-child {border-bottom: none;}
+fieldset div label {
+	float: left;
+	width: 23%;
+	margin: 0 10px 0 0;
+	font-weight: bold;
+	padding: 3px 0 0 0;
+}
+fieldset div label span {
+	display: inline-block;
+	color: #ff0000;
+	margin: 0 0 0 5px;
+}
+fieldset div label span.small-px {
+	font-weight: normal;
+	margin: 4px 0 0 0;
+	color: #777;
+	line-height: 16px;
+}
+fieldset div div.desc,
+fieldset div div.clear {
+	padding: 0; 
+	margin: 0; 
+	border: none;
+}
+fieldset div div.desc {
+	float: left;
+	width: 75%;
+}
+fieldset div div.desc div {
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+fieldset div div.desc div.small-px {
+	color: #777;
+	font-size: 11px;
+	line-height: 15px;
+}
+fieldset div div.desc div.errorMessage {
+	color: #ff0000;
+}
+fieldset div input[type="submit"],
+fieldset div input[type="button"] {
+	padding: 8px 20px;
+	font-size: 13px;
+}
+fieldset div input[type="submit"],
+fieldset div input[type="button"],
+.dialog .dialog-submit input[type="submit"],
+.dialog .dialog-submit input[type="button"] {
+	cursor: pointer;
+	font-weight: bold;
+}
+fieldset div input[type="submit"],
+.dialog .dialog-submit input[type="submit"] {
+	border-top: 1px solid #22292a; 
+	border-right: 1px solid #677275; 
+	border-bottom: 1px solid #677275; 
+	border-left: 1px solid #22292a; 
+	background: #161818 url(../images/resource/login_button.png) 0 0 repeat-x;
+	color: #cad2d4;
+	text-shadow: 0px 1px 0px #000;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+fieldset div input[type="submit"].active,
+.dialog .dialog-submit input[type="submit"].active {
+	background: url(../images/resource/icons/facebook_loader.gif) 50% 50% no-repeat, #161818 url(../images/resource/login_button.png) 0 0 repeat-x;
+	color: transparent;
+	text-shadow: none;
+}
+
+/* Dialog */
+.dialog fieldset {
+	border: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.dialog fieldset div {
+	padding: 7px 0;
+}
+.dialog fieldset div:first-child {
+	padding: 0 0 5px 0;
+}
+.dialog fieldset div:last-child {
+	padding: 5px 0 0 0;
+	border-bottom: none;
+}
+.dialog fieldset div label {
+	padding: 3px 0 0 0;
+	text-align: right;
+	width: 35%;
+}
+.dialog fieldset div div.desc,
+.dialog fieldset div div.clear {
+	padding: 0; margin: 0;
+}
+.dialog fieldset div div.desc {
+	width: 60%;
+}
+.dialog input[type="text"],
+.dialog input[type="password"],
+.dialog input[type="file"],
+.dialog textarea,
+.dialog select {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 4px 6px 4px 6px;
+	margin: 0 0 0 0;
+	width: 100%;
+}
+.dialog fieldset div div.desc .errorMessage {
+	padding: 3px 0 0 0;
+}
+.dialog .dialog-submit input[type="submit"],
+.dialog .dialog-submit input[type="button"] {
+	padding: 5px 12px;
+}
+
+
+/* message
+-------------------------------------------------------------- */
+.errorSummary {
+	padding: 10px 18px;
+	margin-bottom: 15px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.errorSummary {
+	background: #c68989;
+	border: solid 1px #ad7373;
+	text-shadow: 0px 1px 0px #f7b1b1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #eca1a1;
+	-moz-box-shadow: inset 0px 1px 0px 0px #eca1a1;
+	box-shadow: inset 0px 1px 0px 0px #eca1a1;
+	color: #785151;
+}
+.errorSummary.success {
+	background: #adca96;
+	border: solid 1px #98b383;
+	text-shadow: 0px 1px 0px #d3edb3;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	-moz-box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	color:#647458;
+}
+.errorSummary p {
+	font-weight: bold;
+	margin: 0 0 0 0;
+}
+.errorSummary ul {
+	list-style: none;
+	margin: 4px 0 0 0;
+}

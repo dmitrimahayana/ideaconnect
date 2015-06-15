@@ -1,0 +1,654 @@
+/* layout.css *
+* Copyright (c) 2012, Nirwasita Studio. All rights reserved.
+* version: 0.1.0
+*
+*	CSS Reset
+*	Header
+*	Body
+*	Dialog
+*	Footer
+*	Responsive
+*
+*/ 
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------*/
+html {
+	background: #555;
+}
+body {
+	position: relative;
+	padding: 78px 0 0 0;
+}
+body.dialog-on {}
+.container {
+	position: relative;
+	width: 950px;
+	margin: 0 auto;
+}
+
+/* Grid Columns */
+div.grid-1, div.grid-2, div.grid-3, div.grid-4, div.grid-5, div.grid-6, div.grid-7, div.grid-8, div.grid-9, div.grid-10, div.grid-11, div.grid-12 {float:left; margin-right: 10px;}
+div.last { margin-right: 0; }
+div.grid-1 { width: 70px;}
+div.grid-2 { width: 150px;}
+div.grid-3 { width: 230px;}
+div.grid-4 { width: 310px;}
+div.grid-5 { width: 390px;}
+div.grid-6 { width: 470px;}
+div.grid-7 { width: 550px;}
+div.grid-8 { width: 630px;}
+div.grid-9 { width: 710px;}
+div.grid-10 { width: 790px;}
+div.grid-11 { width: 870px;}
+div.grid-12 { width: 950px; margin-right: 0; }
+
+/* =Loading and Dialog
+-------------------------------------------------------------- */
+div[class^="open-dialog"] {
+	display: none;
+}
+
+/* Loading */
+div.loading,
+div.dialog {
+	position: fixed;
+	top:0;
+	right:0;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+div.loading {
+	z-index: 995;
+	background: url('../images/dialog/loading_medium.png') 50% 30px no-repeat;
+}
+div.loading.load {
+	background: rgba(0,0,0,0.6) url('../images/dialog/loading_medium.png') 50% 30px no-repeat;
+}
+
+/* Dialog */
+div.dialog {
+	z-index: 990;
+	background: rgba(0,0,0,0.6);
+}
+div.dialog#apps {
+	-webkit-overflow-scrolling: touch;
+	overflow-y: scroll;
+}
+body.guest .dialog,
+body.login .dialog, 
+body.dialog-on .dialog {
+	display: block;
+}
+.dialog .fixed {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+div.dialog#apps .fixed,
+div.dialog#apps .dialog-box {
+	position: static;
+	width: auto;
+}
+.dialog .dialog-box {
+	position: relative;
+	text-align: center;
+}
+div.dialog#apps .dialog-box {
+	padding: 30px 0 30px 0;
+}
+.dialog .dialog-box form {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+div.dialog .dialog-box .content,
+div.dialog .dialog-box .content * {
+	font-size: 14px;
+	line-height: 19px;
+}
+.dialog .dialog-box .content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	width: 300px;
+	margin: 0 auto;
+	background: #fff;
+	text-align: left;
+}
+div.dialog#apps .dialog-box .content {
+	border: 1px solid #bababa;
+}
+.dialog .dialog-box .content[id='350px'] {width: 350px;}
+.dialog .dialog-box .content[id='400px'] {width: 400px;}
+.dialog .dialog-box .content[id='450px'] {width: 450px;}
+.dialog .dialog-box .content[id='500px'] {width: 500px;}
+.dialog .dialog-box .content[id='550px'] {width: 550px;}
+.dialog .dialog-box .content[id='600px'] {width: 600px;}
+.dialog .dialog-box .content[id='650px'] {width: 650px;}
+.dialog .dialog-box .content[id='700px'] {width: 700px;}
+.dialog .dialog-box .content[id='750px'] {width: 750px;}
+.dialog .dialog-box .content[id='800px'] {width: 800px;}
+.dialog .dialog-box .content[id='850px'] {width: 850px;}
+.dialog .dialog-box .content[id='900px'] {width: 900px;}
+.dialog .dialog-box .content[id='950px'] {width: 950px;}
+
+
+/* =Header
+-------------------------------------------------------------- */
+header,
+header .logo a,
+header .mainmenu ul li,
+header .mainmenu ul li a,
+header .usermenu a.guest {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	height: 74px;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #008fd5;
+	border-top: 4px solid #0d0e13;
+	width: 100%;
+	height: 78px;
+	z-index: 900;
+}
+header:before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 4px;
+	background: url('../images/resource/header_shadow.png') 0 0 repeat-x;
+	z-index: 910;
+}
+
+/* Logo */
+header .logo,
+header .mainmenu {
+	float: left;
+}
+header .logo a,
+header .mainmenu ul li a,
+header .usermenu a.guest {
+	display: block;
+}
+header .logo a {
+	padding: 19px 18px 0 5px;
+}
+
+/* Mainmenu */
+header .mainmenu ul {
+	display: block;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+header .mainmenu ul li {
+	float: left;
+}
+header .mainmenu ul li.inisiator {
+	margin: 0 15px 0 0;
+}
+header .mainmenu ul li.search {
+	padding: 28px 12px 0 12px;
+}
+header .mainmenu ul li a,
+header .usermenu a.guest {
+	padding: 29px 12px 0 12px;
+	border-top: 8px solid transparent;
+	font-family: 'Enriqueta', Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #fff;
+	text-decoration: none;
+}
+header .mainmenu ul li:hover a,
+header .usermenu a.guest:hover,
+header .mainmenu ul li.active a,
+header .usermenu .usermenu.active a.guest {
+	border-top: 8px solid #02618f;
+}
+header .mainmenu ul li.sponsor a,
+header .mainmenu ul li.inisiator a {
+	padding: 29px 15px 0 15px;
+	color: #2b2b2b;
+}
+header .mainmenu ul li.sponsor a {
+	background: url('../images/resource/header_sponsor_bg.png') repeat;
+}
+header .mainmenu ul li.inisiator a {
+	background: url('../images/resource/header_inisiator_bg.png') repeat;
+}
+header .mainmenu ul li.search form {
+	border-bottom: solid 1px #FFF;
+	border-left: solid 1px #FFF;
+	margin: 20px;
+	overflow: visible;
+	max-height: 5px;
+	display: inline-block;
+	padding: 2px;
+}
+header .mainmenu ul li.search input {
+	outline: none;
+	border: none;
+	background: transparent;
+	display: inline-block;
+	position: relative;
+	bottom: 18px;
+	
+}
+
+/* Usermenu */
+header .usermenu {
+	float: right;
+}
+
+
+/* =Body
+-------------------------------------------------------------- */
+div.body {
+	background: #f7f7f7;
+}
+div.body .wrapper .home {
+	padding: 20px 0 25px 0;
+}
+div.body .boxed {
+	margin: 0 0 25px 0;
+}
+div.body .boxed:last-child {
+	margin: 0 0 0 0;
+}
+
+/* Heading */
+div.body .boxed h2 {
+	margin: 0 0 20px 0;
+	font-family: 'Enriqueta', Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 700;
+	color: #424242;
+}
+
+/* =Sidebar and Contant
+-------------------------------------------------------------- */
+div.body div.sidebar-on {
+	position: relative;
+}
+
+/* Sidebar */
+div.body div#sidebar,
+div.body div#content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+}
+div.body div#sidebar {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 100%;
+	background: #e9eef0;
+}
+
+/* Content */
+div.body div#content {
+	width: 730px;
+	padding: 20px 0 25px 10px;
+}
+
+/* Comment */
+.dialog .comment,
+.body .comment {
+	padding: 15px 15px 15px 15px;
+}
+.dialog .comment a.button,
+.body .comment a.button {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0 0 0 10px;
+	background: #008fd5;
+	padding: 7px 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FFF;	
+}
+.dialog .comment a.button:hover,
+.body .comment a.button:hover {
+	background: #64cafb;
+}
+
+.dialog .comment div.form {
+	border-bottom: 1px solid #d9d9d9;
+	background: #e9eef0;
+	padding: 20px 20px 20px 20px;
+}
+.dialog .comment div.form fieldset {
+	background: none;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;	
+}
+.dialog .comment div.form fieldset div.clearfix {
+	padding: 0 20px 12px 20px;
+}
+.dialog .comment div.form fieldset div label,
+.dialog .comment div.form fieldset div div.desc {
+	float: none;
+	width: auto;
+}
+.dialog .comment div.form fieldset div label {
+	display: block;
+	padding: 0 5px 0 5px;
+	margin: 0 0 5px 0;
+}
+.dialog .comment div.form fieldset div div.desc input[type="text"],
+.dialog .comment div.form fieldset div div.desc input[type="submit"],
+.dialog .comment div.form fieldset div div.desc textarea  {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 6px 12px 6px 12px;
+	width: 100%;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+}
+.dialog .comment div.form fieldset div div.desc input[type="text"],
+.dialog .comment div.form fieldset div div.desc textarea {
+	border: 1px solid #8f8f8f;
+	background: #fff;
+	color: #6b6b6b;
+}
+.dialog .comment div.form fieldset div div.desc input[type="submit"] {
+	border: none;
+	background: #008fd5;
+	color: #fff;
+}
+.dialog .comment div.form fieldset div div.desc textarea {
+	height: 120px;
+}
+
+.dialog .comment .list-view,
+.body .comment .list-view {
+	margin: 15px 0 0 0;
+}
+.dialog .comment .list-view .sep,
+.body .comment .list-view .sep {
+	position: relative;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 15px 10px 15px 90px;
+}
+.dialog .comment .sep img,
+.body .comment .sep img {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	display: block;
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;	
+	width: 65px;
+	height: 65px;
+}
+.dialog .comment .sep a,
+.body .comment .sep a {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 19px;	
+}
+.dialog .comment .sep .date,
+.dialog .comment .sep .date a,
+.body .comment .sep .date,
+.body .comment .sep .date a {
+	font-size: 12px !important;
+	line-height: 16px !important;
+}
+.dialog .comment .sep .date,
+.body .comment .sep .date {
+	padding: 6px 0 0 0 !important;
+	color: #aeaeae;
+}
+.dialog .comment .sep .date a,
+.body .comment .sep .date a {
+	float: right;
+}
+.dialog .comment .list-view .sep .list-view,
+.body .comment .list-view .sep .list-view {
+	margin: 15px 0 0 0;
+}
+.dialog .comment .list-view .sep .sep,
+.body .comment .list-view .sep .sep {
+	padding: 15px 0 15px 90px;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: none;
+}
+
+/* Paging */
+.dialog .pager,
+.body .pager {
+	margin: 15px 0 0 0;
+	text-align: center !important;
+}
+.dialog .pager ul,
+.body .pager ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.dialog .pager ul li,
+.body .pager ul li {
+	float: left;
+	margin: 0 7px 0 0;
+}
+.dialog .pager ul li:last-child,
+.body .pager ul li:last-child {
+	margin: 0 0 0 0;
+}
+.dialog .pager ul li a,
+.body .pager ul li a {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: block;
+	border: 2px solid transparent;
+	min-width: 30px;
+	height: 30px;
+	padding: 3px 5px 3px 5px;
+	font-weight: 700;
+	color: #bcc0c5;
+	text-align: center;
+	text-decoration: none;
+}
+.dialog .pager ul li:hover a,
+.body .pager ul li:hover a {
+	color: #ff2626;
+}
+.dialog .pager ul li.page a,
+.body .pager ul li.page a {
+	border: 2px solid #bcc0c5;
+	font-size: 15px;
+	line-height: 17px;
+}
+.dialog .pager ul li.page:hover a,
+.body .pager ul li.page:hover a {
+	border: 2px solid #ff2626;
+}
+.dialog .pager ul li.page.selected a,
+.body .pager ul li.page.selected a {
+	border: 2px solid #ff2626;
+	background: #ff2626;
+	color: #fff;	
+}
+.dialog .pager ul li.first a,
+.dialog .pager ul li.previous a,
+.dialog .pager ul li.next a,
+.dialog .pager ul li.last a,
+.body .pager ul li.first a,
+.body .pager ul li.previous a,
+.body .pager ul li.next a,
+.body .pager ul li.last a {
+	padding: 3px 0 3px 0;
+	font-size: 20px;
+	line-height: 20px;	
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+footer {}
+footer .container,
+footer .connect .grid-3 {
+	padding: 25px 0;
+}
+
+/* Connect and Social Media */
+footer .connect {
+	background: #1a81bc;
+}
+footer .connect .container {
+	padding: 0 0 0 0;
+}
+footer .connect .grid-3,
+footer .connect .grid-3 * {
+	color: #f9f9f9 !important;
+}
+footer .connect .grid-3 {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	min-height: 220px;
+}
+footer .connect h3 {
+	margin: 0 0 12px 0;
+	font-size: 18px;
+	line-height: 25px;
+}
+footer .connect .grid-3 ul {
+	list-style: none;
+	margin: 0 0 0 0;
+	width: 0 0 0 0;
+}
+footer .connect .grid-3 li {
+	margin: 0 0 10px 0;
+}
+footer .connect .grid-3 li:last-child {
+	margin: 0 0 0 0;
+}
+footer .connect .social {
+	padding: 25px 15px 25px 20px;
+	background: url('../images/resource/footer_social_bg.png') repeat;
+}
+footer .connect .grid-3.social li {
+	padding: 7px 0 7px 35px;
+	margin: 0 0 12px 0;
+}
+footer .connect .grid-3.social li:nth-child(1),
+footer .connect .grid-3.social li:nth-child(2) {
+	padding: 4px 0 4px 35px;
+	margin: 0 0 10px 0;
+}
+footer .connect .grid-3.social li:nth-child(1) {
+	padding: 0 0 4px 35px;
+}
+footer .connect .grid-3.social li:last-child {
+	margin: 0 0 0 0;
+}
+footer .connect .social li.phone {
+	background: url('../images/icons/phone.png') 0 50% no-repeat;
+	font-size: 24px;
+	line-height: 30px;
+}
+footer .connect .social li.facebook {
+	background: url('../images/icons/facebook.png') 0 50% no-repeat;
+}
+footer .connect .social li.twitter {
+	background: url('../images/icons/twitter.png') 0 50% no-repeat;
+}
+footer .connect .social li.youtube {
+	background: url('../images/icons/youtube.png') 0 50% no-repeat;
+}
+
+/* Copyright */
+footer .copyright {
+	float: left;
+}
+footer .copyright,
+footer .copyright *,
+footer .powered * {
+	color: #f9f9f9 !important;
+}
+footer .copyright a.logo {
+	display: block;
+	padding: 0 0 10px 0;
+}
+
+
+/* Powered */
+footer .powered {
+	float: right;
+}
+footer .powered h5 {
+	padding: 0 0 0 0;
+	margin: 0 0 10px 0;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 17px;
+}
+footer .powered a {
+	float: left;
+	margin: 0 20px 0 0;
+}
+footer .powered a:last-child {
+	margin: 0 0 0 0;
+}
+
+/* =Responsive
+-------------------------------------------------------------- */
+/* Resolution 1280 */
+@media only screen and (max-width:1280px) {
+
+}
+
+/* Resolution 1024 */
+@media only screen and (max-width:1024px) {
+
+}
+
+/* Resolution 768 */
+@media only screen and (max-width:768px) {
+
+}
+
+/* Resolution 600 */
+@media only screen and (max-width:600px) {
+
+}
+
+/* Resolution 480 */
+@media only screen and (max-width:480px) {
+
+}
+
+/* Resolution 320 */
+@media only screen and (max-width:320px) {
+
+}

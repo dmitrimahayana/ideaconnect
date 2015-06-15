@@ -1,0 +1,63 @@
+/* typography.css *
+* Copyright (c) 2011, ECC UGM. All rights reserved.
+* version: 0.1.0
+* 
+*/ 
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	color: #333; font-size: 12px; line-height: 17px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+a:link { color: #333; text-decoration: none; }
+a:visited { color: #111; text-decoration: none; }
+a:hover { color: #111; text-decoration: underline; }
+
+/* =Misc class for general use 
+------------------------------------------------------------ */
+/* Font Weight */
+.bold {font-weight: bold;} .italic {font-weight: italic;} .normal {font-weight: normal;}
+
+/* Text Align */
+.text-left {text-align: left;} .text-right {text-align: right;} .text-center, .center {text-align: center;}
+
+/* Font Size */
+.smallo-px {font-size: 12px;} .small-px {font-size: 11px;} .smaller-px {font-size: 10px;} .smallest-px {font-size: 9px;}
+.large-px {font-size: 13px; line-height: 18px;} .larger-px {font-size: 15px; line-height: 22px;} .xtra-large {font-size:17px; font-size: 25px;}
+
+/* Remove n Clear */
+.decor-none, .decor-none:hover{text-decoration:none; border-bottom:none;}
+
+/* Font-Family */
+.tahoma {font-family: Tahoma, Arial, Helvetica, sans-serif;}
+.trebuchet {font-family: Trebuchet MS, Arial, Helvetica, sans-serif;}
+.verdana {font-family: Verdana, Arial, Helvetica, sans-serif;}
+@font-face {
+    font-family: 'iconSweets';
+    src: url('../fonts/icon-webfont.eot');
+    src: url('../fonts/icon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/icon-webfont.woff') format('woff'),
+         url('../fonts/icon-webfont.ttf') format('truetype'),
+         url('../fonts/icon-webfont.svg#iconSweetsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Font Color */
+.black {color: #000;}
+.white {color: #FFF;}
+.silent {color: #777;}
+.link {color:4e6a97;}
+.orange {color: orange;}
+.red {color: #ad0b0c;}
+
+/* =Content
+------------------------------------------------------------ */

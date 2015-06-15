@@ -1,0 +1,744 @@
+/* form.css *
+* Copyright (c) 2012, Nirwasita Studio. All rights reserved.
+* version: 0.1.0
+*
+*	CSS Reset
+*	Input
+*	Content
+*
+*/ 
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------*/
+input.span-1, textarea.span-1 {width: 6%;}
+input.span-2, textarea.span-2 {width: 10%;}
+input.span-3, textarea.span-3 {width: 20%;}
+input.span-4, textarea.span-4, select.small {width: 30%;}
+input.span-5, textarea.span-5 {width: 40%;}
+input.span-6, textarea.span-6 {width: 50%;}
+input.span-7, textarea.span-7, select.large {width: 60%;}
+input.span-8, textarea.span-8 {width: 70%;}
+input.span-9, textarea.span-9 {width: 80%;}
+input.span-10, textarea.span-10 {width: 90%;}
+input.span-11, textarea.span-11, select.large {width: 100%;}
+
+/*simple class*/
+input.full, select.full, textarea.full {width:99%;}
+textarea.smaller {height: 70px;}
+textarea.small {height: 100px;}
+textarea.medium {height: 150px;}
+textarea.large {height: 200px;}
+
+
+/* =Input
+-------------------------------------------------------------*/
+input, button, select, textarea {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	vertical-align: middle;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-size: 12px; 
+	line-height: 17px;
+	resize: none;
+}
+textarea {
+	display: block;
+}
+button, input {
+	*overflow: visible;
+	line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+input:-moz-placeholder,
+input:-ms-input-placeholder,
+input::-webkit-input-placeholder,
+textarea:-moz-placeholder,
+textarea:-ms-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #999999;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+	cursor: not-allowed;
+	background-color: #eeeeee;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+	background-color: transparent;
+}
+
+/* Button and Submit */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+/* Search */
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Checkbox and Radio */
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 4px 0 0;
+	margin-top: 1px \9;
+	*margin-top: 0;
+	line-height: normal;
+	cursor: pointer;
+}
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+	width: auto;
+}
+
+/* Select and File */
+/*select,
+input[type="file"] {
+	height: 30px;
+	*margin-top: 4px;
+	line-height: 30px;
+}*/
+	/* In IE7, the height of the select element cannot be changed by height, only font-size */
+	/* For IE7, add top margin to align select with labels */
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+/* Custom */
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+	background: #f8f8f8;
+	padding: 7px 8px 7px 8px;
+	color: #666;
+}
+select {
+	padding: 4px 4px 4px 8px;
+	margin: 0 0 4px 0;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus { 
+	border-top: solid 1px #f0d648;
+	border-right: solid 1px #f0d648;
+	border-bottom: solid 1px #f0d648;
+	border-left: solid 1px #f0d648;
+	outline: 0;
+	outline: thin dotted \9;
+}
+textarea.error,
+input[type="text"].error,
+input[type="password"].error,
+input[type="datetime"].error,
+input[type="datetime-local"].error,
+input[type="date"].error,
+input[type="month"].error,
+input[type="time"].error,
+input[type="week"].error,
+input[type="number"].error,
+input[type="email"].error,
+input[type="url"].error,
+input[type="search"].error,
+input[type="tel"].error,
+input[type="color"].error {
+	border-top: solid 1px #dc5c5c;
+	border-right: solid 1px #dc5c5c;
+	border-bottom: solid 1px #dc5c5c;
+	border-left: solid 1px #dc5c5c;
+	background: url('../images/icons/input_error.png') 100% 50% no-repeat;
+}
+
+/* Dialog */
+.dialog input[type="text"],
+.dialog input[type="password"],
+.dialog input[type="file"],
+.dialog textarea,
+.dialog select {
+	padding: 5px 5px 5px 5px;
+}
+.dialog select {
+	padding: 3px 3px 3px 5px;
+}
+
+
+/* =Content
+-------------------------------------------------------------- */
+div.form {
+	-webkit-box-shadow: 0px 1px 2px 0px #acaeaf;
+	-moz-box-shadow: 0px 1px 2px 0px #acaeaf;
+	box-shadow: 0px 1px 2px 0px #acaeaf;
+	border-top: 1px solid #e5e5e5;
+}
+.body .content.edit {
+	padding: 15px 15px 15px 15px;
+}
+
+/* Fieldset */
+fieldset {
+	background: #fff;
+}
+fieldset div.intro,
+fieldset div.clearfix {
+	border-bottom: 1px dotted #d3d3d3;
+}
+fieldset div.intro {
+	padding: 15px 20px;
+}
+fieldset div.clearfix {
+	padding: 10px 20px;
+}
+fieldset div.clearfix:last-child,
+fieldset div#ajax-message {
+	border: none;
+}
+fieldset div#ajax-message,
+fieldset div div.desc {
+	padding: 0 0 0 0;
+}
+fieldset div label,
+fieldset div div.desc {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+}
+fieldset div label {
+	width: 30%;
+	padding: 3px 20px 0 0;
+	font-weight: bold;
+}
+fieldset div label span,
+fieldset div div.desc span.small-px,
+fieldset div div.desc span.desc {
+	display: block;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 14px;
+	color: #808080;
+}
+fieldset div label span {
+	padding: 5px 0 0 0;
+}
+fieldset div label span.required {
+	display: inline-block;
+	margin: 0 0 0 1px;
+	padding: 0 0 0 0;
+	color: #ff0000;
+}
+fieldset div div.desc {
+	width: 70%;
+}
+fieldset div div.desc input[type="checkbox"],
+fieldset div div.desc input[type="radio"],
+fieldset div div.desc input[type="submit"],
+fieldset div div.desc input[type="button"] {
+	width: auto;
+}
+fieldset div div.desc label {
+	float: none;
+	width: auto;
+	padding: 0;
+	font-weight: normal;
+}
+fieldset div div.desc p,
+fieldset div div.desc span.small-px {
+	margin: 10px 0 7px 0;
+	padding: 10px 0 0 0;
+	border-top: 1px dotted #e6e6e6;
+}
+fieldset div div.desc p:first-child,
+fieldset div div.desc span.small-px:first-child{
+	margin: 0 0 7px 0;
+	padding: 0 0 0 0;
+	border-top: none;
+}
+fieldset div div.desc span {
+	display: block;
+}
+fieldset div div.desc span.desc {
+	display: inline-block;
+	margin: 0 0 7px 0;
+}
+fieldset div div.desc div.small-px:last-child {
+	padding: 5px 0 0 0;
+}
+fieldset div div.desc span input[type="radio"],
+fieldset div div.desc span input[type="checkbox"] {
+	margin: 0 5px 0 0;
+}
+fieldset div div.desc span label {
+	display: inline-block;
+	padding: 2px 0 0 0;
+}
+fieldset div div.desc div.errorMessage {
+	padding: 5px 0 0 0;
+	color: #ff0000;
+}
+fieldset div.submit div.desc input[type="submit"] {
+	border: 1px solid #477dae;
+	background: #477DAE url(../images/login/buttonblue_bg.png) 0 0 repeat-x;
+	padding: 7px 15px;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 13px;
+	color: #fff;
+	text-shadow: 0 1px 0 #104266;
+}
+fieldset div.submit div.desc input[type="submit"]:hover {
+	background: #558bbc;
+}
+
+fieldset div div.desc ul.clearfix,
+fieldset div div.desc ul.clearfix ul,
+fieldset div div.desc ul.clearfix li {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+fieldset div div.desc ul.clearfix,
+fieldset div div.desc ul.clearfix ul {
+	display: block;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+fieldset div div.desc ul.clearfix ul {
+	padding: 6px 0 0 21px;
+}
+fieldset div div.desc ul.clearfix li {
+	border-top: 1px dotted #ccc;
+	padding: 10px 0  10px 0;
+}
+fieldset div div.desc ul.clearfix li:first-child,
+fieldset div div.desc ul.clearfix li li {
+	border-top: none;
+}
+fieldset div div.desc ul.clearfix li:first-child {
+	padding: 0 0  10px 0;
+}
+fieldset div div.desc ul.clearfix li input {
+	margin: 0 5px 0 0;
+	font-size: 13px;
+	line-height: 13px;
+	text-transform: uppercase;
+}
+fieldset div div.desc ul.clearfix li li,
+fieldset div div.desc ul.clearfix li li:first-child {
+	padding: 0 0 5px 0;
+}
+fieldset div div.desc ul.clearfix li li {
+	float: left;
+	width: 50%;
+}
+fieldset div div.desc ul.clearfix li li li,
+fieldset div div.desc ul.clearfix li li li:first-child {
+	float: none;
+	width: 100%;
+}
+fieldset div div.desc div.field {
+	padding: 0 0 10px 0;
+}
+ 
+/* CLEditor */
+fieldset div div.desc div.cleditorMain {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* Fieldset Sidebar ON */
+fieldset.clearfix {}
+fieldset.clearfix div.left,
+fieldset.clearfix div.right {
+	float: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	z-index: 800;
+}
+fieldset.clearfix div.left {
+	width: 70%;
+}
+fieldset.clearfix div.left .shadow,
+fieldset.clearfix div.right .shadow {
+	position: absolute;
+	top: 0;
+	background: #ccc;
+	width: 3px;
+	height: 100%;
+}
+fieldset.clearfix div.left .shadow {
+	right: -3px;
+}
+fieldset.clearfix div.left h5,
+fieldset.clearfix div.right h5 {
+	margin: 0 0 0 0;
+	padding: 10px 15px;
+	background: #fff url('../images/resource/panel_header.png') repeat;
+	color: #111;
+}
+
+fieldset.clearfix div.right {
+	width: 30%;
+	border-left: 3px solid #ccc;
+}
+fieldset.clearfix div.right .shadow {
+	left: -3px;
+}
+fieldset.clearfix div.right div.clearfix {
+	padding: 10px 15px;
+}
+fieldset.clearfix div.right div.clearfix label,
+fieldset.clearfix div.right div.clearfix div.desc {
+	float: none;
+	width: 100%;
+}
+fieldset.clearfix div.right div.clearfix label {
+	display: block;
+	padding: 0 0 7px 0;
+}
+fieldset.clearfix div.right div.clearfix span {
+	display: inline-block;
+	margin: 0 0 6px 0;
+}
+fieldset.clearfix div.right div.clearfix.publish input {
+	margin: -1px 5px 0 0;
+}
+fieldset.clearfix div.right div.clearfix.publish label {
+	display: inline-block;
+	width: auto;
+	padding: 0 0 0 0;
+}
+fieldset.clearfix div.right div.clearfix div.desc input,
+fieldset.clearfix div.right div.clearfix div.desc select {
+	margin: 0 3px 0 5px;
+}
+fieldset.clearfix div.right div.clearfix div.desc input:first-child,
+fieldset.clearfix div.right div.clearfix div.desc select:first-child {
+	margin: 0 3px 0 0;
+}
+fieldset.clearfix div.right div.clearfix div.desc label {
+	display: inline-block;
+	width: auto;
+}
+fieldset.clearfix div.submit {
+	border-top: 1px solid #e6e6e6;
+}
+fieldset.clearfix div.submit label {
+	display: none;
+}
+fieldset.clearfix div.submit div.desc {
+	width: 100%;
+	text-align: center;
+}
+fieldset.clearfix div.submit input {
+	border: 1px solid #477dae;
+	background: #477DAE url(../images/login/buttonblue_bg.png) 0 0 repeat-x;
+	padding: 7px 15px;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 13px;
+	color: #fff;
+	text-shadow: 0 1px 0 #104266;
+}
+fieldset.clearfix div.submit input:hover {
+	background: #558bbc;
+}
+
+/* Quick Create On */
+.partial-add div.grid-view,
+.partial-add div.form {
+	float: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.partial-add div.grid-view {
+	width: 62%;
+}
+.partial-add div.form {
+	width: 38%;
+	padding: 0 0 0 20px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-top: none;
+}
+.partial-add div.form h3 {
+	margin: 0 0 10px 0;
+	padding: 5px 0 12px 0;
+	border-bottom: 2px solid #ccc;
+	font-size: 14px;
+	line-height: 14px;
+}
+.partial-add div.form fieldset {
+	background: transparent;
+}
+.partial-add div.form fieldset div.intro,
+.partial-add div.form fieldset div.clearfix {
+	padding: 10px 0;
+}
+
+/* Dialog
+-------------------------------------------------------------- */
+.dialog .dialog-content fieldset div.intro {
+	padding: 0 5px 15px 5px;
+}
+.dialog .dialog-content fieldset div.clearfix {
+	padding: 5px 5px;
+}
+.dialog .dialog-content fieldset div.clearfix:last-child,
+.dialog .dialog-content fieldset div div.desc {
+	border: none;
+}
+.dialog .dialog-content fieldset div label {
+	width: 35%;
+	padding: 3px 12px 0 0;
+	text-align: right;
+}
+.dialog .dialog-content fieldset div div.desc {
+	padding: 0 0 0 0;
+	width: 65%;
+}
+.dialog .dialog-content fieldset div div.desc label {
+	float: none;
+	width: auto;
+	padding: 0;
+	font-weight: normal;
+}
+.dialog .dialog-content fieldset div div.desc .errorMessage {
+	padding: 5px 0 0 0;
+	font-size: 11px;
+	line-height: 14px;
+}
+.dialog .dialog-submit input {
+	border: 1px solid #477dae;
+	background: #477DAE url(../images/login/buttonblue_bg.png) 0 0 repeat-x;
+	padding: 8px 15px;
+	margin: 0 0 0 7px;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 1px 0 #104266;
+	font-size: 12px;
+	line-height: 12px;
+	cursor: pointer;
+}
+.dialog .dialog-submit input[type="button"] {
+	border: 1px solid #c4c4c4;
+	background-color: #ebebeb;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(245, 245, 245)), to(rgb(235, 235, 235)));
+	background-image: -webkit-linear-gradient(top, rgb(245, 245, 245), rgb(235, 235, 235));
+	background-image: -moz-linear-gradient(top, rgb(245, 245, 245), rgb(235, 235, 235));
+	background-image: -o-linear-gradient(top, rgb(245, 245, 245), rgb(235, 235, 235));
+	background-image: -ms-linear-gradient(top, rgb(245, 245, 245), rgb(235, 235, 235));
+	background-image: linear-gradient(top, rgb(245, 245, 245), rgb(235, 235, 235));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5', EndColorStr='#ebebeb');
+	box-shadow: 0 1px 3px #ccc, inset 0 1px 0 #fff;
+	color: #666;
+	text-shadow: none;
+}
+.dialog .dialog-submit input[type="submit"]:hover {
+	background: #558bbc;
+}
+.dialog .dialog-submit input[type="submit"].active {
+	background: url('../images/icons/ajax_loader.gif') 50% 50% no-repeat, #477DAE url(../images/login/buttonblue_bg.png) 0 0 repeat-x;
+	color: transparent;
+	text-shadow: none;
+}
+
+
+/* Message
+-------------------------------------------------------------- */
+div.errorSummary {
+	display: none;
+	padding: 10px 15px;
+	margin: 0 0 10px 0;
+	background: #c68989;
+	border-bottom: none;
+	color: #785151;
+}
+div.errorSummary.success {
+	display: block;
+	background: #adca96;
+	border: solid 1px #98b383;
+	text-shadow: 0px 1px 0px #d3edb3;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	-moz-box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	box-shadow: inset 0px 1px 0px 0px #b8e3b6;
+	color:#647458;
+}
+div.errorSummary p {
+	font-weight: bold;
+	margin: 0 0 0 0;
+}
+div.errorSummary ul {
+	list-style: none;
+	margin: 4px 0 0 0;
+}
+
+/* =Responsive
+-------------------------------------------------------------- */
+/* Resolution 1024 */
+@media only screen and (max-width:1024px) {
+	/* CLEditor */
+	fieldset div div.desc div.cleditorMain {
+		width: 100% !important;
+	}
+}
+
+/* Resolution 900 */
+@media only screen and (max-width:900px) {
+	/* Fieldset */
+	fieldset div div.desc textarea {
+		width: 100%;
+	}
+}
+
+/* Resolution 768 */
+@media only screen and (max-width:768px) {
+	/* Fieldset */
+	fieldset div.intro {
+		padding: 12px 15px;
+	}
+	fieldset div.clearfix {
+		padding: 10px 15px;
+	}
+	fieldset div label,
+	fieldset div div.desc {
+		float: none;
+	}
+	fieldset div label {
+		padding: 0 0 0 0;
+		width: 100%;
+	}
+	fieldset div div.desc {
+		margin: 9px 0 0 0;
+		width: 100%;
+	}
+	fieldset div div.desc input[type="text"] {
+		width: 60%;
+	}
+	fieldset div div.desc select {
+		width: 100%;
+	}
+	fieldset div.submit label {
+		display: none;
+	}
+	fieldset div.submit div.desc {
+		margin: 0 0 0 0;
+		text-align: center;
+	}
+	fieldset div.submit div.desc input {
+		margin: 0 auto;
+	}
+	/* Message */
+	fieldset div div.desc .errorMessage {
+		padding: 7px 0 0 0;
+		font-size: 11px;
+		line-height: 14px;
+	}
+}
+
+/* Resolution 600 */
+@media only screen and (max-width:600px) {
+	/* Fieldset */
+	fieldset div div.desc select {
+		width: auto;
+	}
+	fieldset div div.desc div.errorMessage {
+		display: none;
+	}
+	/* Message */
+	div.errorSummary {
+		display: block;
+	}
+}
+
+/* Resolution 480 */
+@media only screen and (max-width:480px) {
+	/* Fieldset */
+	fieldset div div.desc select {
+		width: 100%;
+	}
+}
+
+/* Resolution 320 */
+@media only screen and (max-width:320px) {
+	/* Fieldset */
+	fieldset div div.desc input[type="text"] {
+		width: 100%;
+	}
+}

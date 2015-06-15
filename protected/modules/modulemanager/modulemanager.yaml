@@ -1,0 +1,6 @@
+name          : Iklan
+author        : Agus Susilo
+description   : Contoh deskripsi module
+creation_date : 2012-08-10 21:27
+version:      : 1.0
+widgets       : HookIklan.php

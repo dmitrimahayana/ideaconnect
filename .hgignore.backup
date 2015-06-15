@@ -1,0 +1,12 @@
+.hgignore
+assets/
+backup/
+cache/
+protected/runtime/
+protected/config/common-dev.php
+protected/config/database-dev.php
+
+syntax: glob
+*.orig
+*.bak
+.idea

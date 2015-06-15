@@ -1,0 +1,128 @@
+/* layout.css *
+* Copyright (c) 2011, ECC UGM. All rights reserved.
+* version: 0.1.0
+*
+*/
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	margin: 0; padding: 0; border: 0;
+	color: #333; font-size: 12px; line-height: 17px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+html {background: url(../images/resource/html_bg.png) repeat;}
+
+a:link { color: #f0f0f0; text-decoration: none; }
+a:visited { color: #f0f0f0; text-decoration: none; }
+a:hover { color: #fff; text-decoration: underline; }
+
+/*Remove n Clear*/
+.clear {clear: both; font-size: 1px;}
+
+/* =Login
+-------------------------------------------------------------- */
+.login {
+	border-top: 6px solid #3c4143;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.login .fixed {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+.login .content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #586366;
+	background: url(../images/resource/content_bg.png) repeat;
+	width: 360px;
+	padding: 30px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0px 0px 1px 0px #262e30;
+	-webkit-box-shadow: 0px 0px 1px 0px #262e30;
+	box-shadow: 0px 0px 1px 0px #262e30;
+}
+.login .content div {padding: 0 0 15px 0;}
+.login .content div.errorMessage {
+	padding: 7px 0 0 0;
+	color: #fff;
+}
+
+/* Remember */
+.login .content div.rememberMe,
+.login .content div.rememberMe div {padding: 0; margin: 0;}
+.login .content div.rememberMe input[type="submit"] {
+	float: right;
+	border-top: 1px solid #22292a; 
+	border-right: 1px solid #677275; 
+	border-bottom: 1px solid #677275; 
+	border-left: 1px solid #22292a; 
+	background: #161818 url(../images/resource/login_button.png) 0 0 repeat-x;
+	padding: 6px 20px;
+	color: #cad2d4;
+	text-shadow: 0px 1px 0px #000;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 13px;
+}
+.login .content div.rememberMe label {
+	color:#9eaeb3;
+	text-shadow: 0px 1px 0px  #363d3f;
+}
+.login .content div.rememberMe label:hover {color: #f0f0f0;}
+
+/* =Form
+-------------------------------------------------------------- */
+.login .content input[type="text"],
+.login .content input[type="password"] {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-top: 1px solid #465256;
+	border-right: 1px solid #6c777a;
+	border-bottom: 1px solid #6c777a;
+	border-left: 1px solid #465256;
+	background: #626d71 url(../images/resource/input_login_bg.png) 0 0 repeat-x;
+	padding: 7px 12px 7px 37px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #2a2f31;
+	width: 100%;
+	font-size: 13px;
+	line-height: 18px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-shadow: 0px 1px 0px  #70797c;
+}
+.login .content input[type="text"]:focus,
+.login .content input[type="password"]:focus {
+	color:#dbe7eb;
+	text-shadow: 0px 1px 0px #222526;
+}
+.login .content input[type="text"].error,
+.login .content input[type="password"].error {
+	border: 1px solid #f14b00;
+}
+.login .content input#AdminLoginForm_username {
+	background: url(../images/resource/icons/people_small.png) 10px 50% no-repeat, #626d71 url(../images/resource/input_login_bg.png) 0 0 repeat-x;
+}
+.login .content input#AdminLoginForm_password {
+	background: url(../images/resource/icons/key_small.png) 10px 50% no-repeat, #626d71 url(../images/resource/input_login_bg.png) 0 0 repeat-x;
+}

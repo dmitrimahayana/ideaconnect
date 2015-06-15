@@ -1,0 +1,174 @@
+/* layout.css *
+* Copyright (c) 2011, ECC UGM. All rights reserved.
+* version: 0.1.0
+*
+*/
+
+/* =CSS Reset : reset default browser style
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+	margin: 0; padding: 0; border: 0;
+	color: #333; font-size: 12px; line-height: 17px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+html {background: url('../images/resource/html_bg.png') repeat;}
+
+a:link { color: #f0f0f0; text-decoration: none; }
+a:visited { color: #f0f0f0; text-decoration: none; }
+a:hover { color: #fff; text-decoration: underline; }
+
+/*Remove n Clear*/
+.clear {clear: both; font-size: 1px;}
+
+/* =Login
+-------------------------------------------------------------- */
+.login {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.login .fixed {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+.login .content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	background: #f8f8f8;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	width: 560px;
+	padding: 12px 12px 15px 12px;
+}
+.login .content img {
+	display: block;
+}
+.login .content img.backoffice {
+	margin: 12px 0 0 0;
+	float: left;
+}
+.login .content img.logo {
+	float: right;
+}
+
+.login .content form {position: relative;}
+.login .content ul.form {
+	display: block;
+	list-style: none;
+	margin: 15px 0 0 0;
+	padding: 0 0 0 0;
+}
+.login .content ul.form li {
+	float: left;
+}
+
+
+/* =Form
+-------------------------------------------------------------- */
+.login .content input[type="text"],
+.login .content input[type="password"],
+.login .content input[type="submit"] {
+	display: block;
+	margin: 0 0 0 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+.login .content input[type="text"],
+.login .content input[type="password"] {
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	border-left: 1px solid #d9d9d9;
+	background: #fdfdfd url(../images/login/input_bg.png) 0 0 repeat-x;
+	padding: 5px 8px 5px 8px;
+	margin: 0 7px 0 0;
+	-moz-box-shadow: 0 1px 0 #fff;
+	-webkit-box-shadow: 0 1px 0 #fff;
+	box-shadow: 0 1px 0 #fff;
+	color: #777;
+	font-size: 15px;
+	line-height: 17px;
+	width: 200px;
+}
+.login .content input[type="text"]:focus,
+.login .content input[type="password"]:focus {
+	color: #444;
+	font-weight:bold;
+}
+
+.login .content input[type="submit"] {
+	border-top: 1px solid #477DAE; 
+	border-right: 1px solid #477DAE; 
+	border-bottom: 1px solid #477DAE; 
+	border-left: 1px solid #477DAE; 
+	background: url(../images/login/key.png) 10px 50% no-repeat, #477DAE url(../images/login/buttonblue_bg.png) 0 0 repeat-x;
+	padding: 5px 8px 5px 30px;
+	color: #fff;
+	text-shadow: 0px 1px 0px #104266;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 17px;
+	font-weight: bold;
+}
+.login .content input[type="submit"]:hover {
+	background: #558BBC url(../images/office/icons/key.png) 10px 50% no-repeat;
+}
+
+/* =Error
+-------------------------------------------------------------- */
+.login .content form .notifier {
+	position: absolute;
+	left: -12px;
+	top: -30px;
+	width: 100%;
+	padding: 0 12px 12px;
+}
+.login .content form .errorSummary {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(250,14,30,0.3);
+	width: 100%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.login .content form .errorSummary p,
+.login .content form .errorSummary ul li {
+	font-size: 12px;
+	line-height: 17px;
+}
+.login .content form .errorSummary p {
+	display: block;
+	padding: 10px 12px 0 12px;
+	font-weight: bold;
+	color: #f9f9f9;
+}
+.login .content form .errorSummary ul {
+	list-style: none;
+	margin: 3px 12px 0 12px;
+	padding: 0 0 9px 0;
+}
+.login .content form .errorSummary ul li {
+	color: #fff;
+}
+
+.right { float:right }
+
